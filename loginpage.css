@@ -1,0 +1,38 @@
+#login-divs bi{
+    font-size: 1.4rem !important;
+}
+
+/* Social Media Brand Colors */
+.bi-apple {
+    color: #000000 !important;
+}
+
+.bi-facebook {
+    color: #1877F2 !important;
+}
+
+.bi-box {
+    color: #00a98f !important;
+}
+
+.bi-github {
+    color: #181717 !important;
+}
+
+.bi-google {
+    color: #4285F4 !important;
+}
+
+.bi-x {
+    color: #000000 !important;
+}
+
+
+
+.justdivsandabutton button{
+    border-radius: 0%;
+}
+
+.justdivsandabutton input{
+    border-radius: 0%;
+}

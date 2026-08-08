@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a  {
+    text-decoration: none;
+}
+.sidebar {
+    position: fixed;
+    width: 48px;
+    height: 86%;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #bababa5b;
+    z-index: 1000;
+}
+.cont {
+    background-color: #f9f9f9;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.cont::-webkit-scrollbar {
+    width: 6px;
+}
+ .cont:hover::-webkit-scrollbar-thumb {
+    background-color: #a0a0a0;
+    padding: 5px;
+    border-radius: 5px;
+}
+.cont::-webkit-scrollbar-button{
+    visibility: hidden;
+} 
+.cont:hover::-webkit-scrollbar-button {
+    background-color: transparent;
+    height: 10px;
+    visibility: visible;
+}
+.cont:hover::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%23000"><path d="m280-400 200-200 200 200H280Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cont:hover::-webkit-scrollbar-button:vertical:increment {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%23000"><path d="M480-360 280-560h400L480-360Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.drop {
+    background-color: transparent !important;
+}
+.dropdev, .drop {
+    position: static; 
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px 5px 8px;
+    border-bottom: 1px solid #d1d1d1;
+    background-color: #c4c4c5;
+}
+.drop a img {
+    border-radius: 8px;
+}
+.dropdev img, .drop img {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1.2px solid #a4a4a4;
+}
+.drop:hover, .dropdev:hover {
+    background-color: #eaeaea !important;
+}
+.dropdev .shows, .shows {
+    display: none;
+    position: fixed; 
+    left: 49px; 
+    top: 20px;
+    width: 300px;
+    height: 330px;
+    color: #333;
+    border: 1px solid #a4a4a4;
+    border-radius: 8px;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-align: left;
+}
+#top-show {
+    flex-direction: column;
+    height: 100vh;
+    top: 2px; 
+    bottom: 3px;
+    background: #fff;
+    z-index: 1000;
+    overflow: hidden;
+}
+.dropdev .shows img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+.feed-card img {
+    width: 100%;
+    height: 120px;
+    border-radius: 0;
+    border: none;
+    padding: 0 20px;
+}
+.inner {
+    display: flex;
+    /* flex-direction: row; */
+    gap: 2px;
+}
+.shows-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: auto;
+}
+.shows-header {
+    padding: 0 !important;
+    border-bottom: 1px solid #c4c4c5;
+}
+.inner img {
+    width: 150px;
+    height: 35px;
+    border-radius: 3%;
+    padding-top: 8px;
+}
+.inner p {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(36, 36, 36);
+}
+.dropdev p {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(9, 9, 9);
+}
+.feedcard {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.feedcard h2, .feedcard a, 
+.feedcard p, .shows-header h3,
+.shows-header p {
+    padding: 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.feedcard .btn {
+    padding: 8px;
+    width: 100%;
+    font-size: 15px;
+}
+.feedcard .btn:hover {
+    background-color: #3b4add;
+}
+.feedcard h2 {
+    font-size: 18.72px;
+    font-weight: 700;
+    color: rgb(9, 9, 9);
+}
+#top-show {
+    left: 49px;
+}
+.shows-header h3 {
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+    color: rgb(36, 36, 36);
+}
+.shows-header p {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(87, 87, 87);
+}
+.drop:hover .shows, 
+.dropdev:hover .shows {
+    display: flex;
+}
+.button .btns {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #bababa;
+    border-right: 1px solid #bababa;
+}
+/* .shows-content {
+    padding: 15px;
+    overflow-y: auto;
+    height: 100%;
+} */
+/* .feed-card {
+    margin-bottom: 20px;
+} */
+/* .card-img {
+    width: 100%;
+    height: 120px;
+    background-color: #333;
+    border-radius: 6px;
+    margin-bottom: 8px;
+} */
+.main-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    width: 50%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.form img {
+    width: 50px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.login-btn button {
+    width: 43%;
+    height: 50px;
+    display: flex;
+    gap: 170px;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-family: sans-serif;
+    background-color: white;
+    padding: 0 10px;
+}
+
+.main-form i {
+    font-size: 20px;
+}
+.fb i {
+    color: #1877f2;
+}
+.main-form button:hover {
+    background-color: rgba(128, 128, 128, 0.075);
+}
+.form-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+.form-text h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    font-style: italic;
+    color: rgb(115, 115, 115);
+    width: 33%;
+}
+.form-text p {
+    font-size: 15px;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+span {
+    color: rgb(59, 73, 223);
+}   
+.line {
+    border-bottom: 1px solid #eaeaea;
+    width: 40%;
+}
